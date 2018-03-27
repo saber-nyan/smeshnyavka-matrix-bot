@@ -1,8 +1,8 @@
 # <p align="center">СМЕШНЯВКА-БОТ для Matrix IM</p>
 
-Постит, внезапно, **СМЕШНЯВКИ** с башорга по команде `!meh`.
+Постит, внезапно, **СМЕШНЯВКИ** с башорга по команде `!трави`.
 
-Оригинальная идея - [saber-nyan](https://matrix.to/#/@saber-nyan:matrix.org)
+Оригинальная идея — [saber-nyan](https://matrix.to/#/@saber-nyan:matrix.org)
 и [Nightfall](https://matrix.to/#/@leerenix:matrix.org), заебавший смешнявками~
 
 Библиотеки: [python-matrix-bot-api](https://github.com/shawnanastasio/python-matrix-bot-api).
