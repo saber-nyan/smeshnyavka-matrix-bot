@@ -1,0 +1,28 @@
+[Unit]
+Description=Постит смешнявки с башорга в Matrix IM
+Documentation=https://github.com/saber-nyan/smeshnyavka-matrix-bot/blob/master/README.rst
+# Ждем сеть. Мог написать здесь фигню...
+Wants=network-online.target
+After=network.target network-online.target
+
+[Service]
+Type=simple
+# Путь до python в вашей *virtualenv*!
+ExecStart=/home/saber-nyan/Documents/WORKDIR/venv-sm/bin/python -m smeshnyavka-matrix-bot
+# Путь до файла с env-переменными.
+# Подробнее: https://coreos.com/os/docs/latest/using-environment-variables-in-systemd-units.html#environmentfile-directive
+# О необходимых (и не очень) переменных смотрите в README.rst и smeshnyavka-matrix-bot/config.py.
+EnvironmentFile=/home/saber-nyan/Documents/WORKDIR/env-sm.txt
+# Ваш юзер.
+User=saber-nyan
+Group=users
+Nice=-5
+RestartSec=3s
+Restart=always
+# Лимиты на количество стартов нам не нужны, пускай запускается пока не офигеет.
+StartLimitIntervalSec=0
+StartLimitBurst=0
+
+[Install]
+Alias=smeshnyavka-matrix-bot smeshnyavka_matrix_bot smeshnyavka-matrix
+WantedBy=multi-user.target
